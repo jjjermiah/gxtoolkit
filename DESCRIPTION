@@ -12,14 +12,10 @@ BugReports: https://github.com/jjjermiah/gxtoolkit/issues
 Depends:
     R (>= 3.6)
 Imports:
-    plumber,
-    shiny,
     stringr
 Suggests:
     future,
-    httr,
     knitr,
-    shinytest2,
     testthat (>= 3.0)
 VignetteBuilder:
     knitr

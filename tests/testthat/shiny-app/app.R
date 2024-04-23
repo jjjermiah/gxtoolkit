@@ -1,1 +1,0 @@
-gxtoolkit::shiny_app()
