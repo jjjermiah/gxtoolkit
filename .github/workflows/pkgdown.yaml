@@ -26,11 +26,6 @@ on:
       - NAMESPACE
   workflow_dispatch:
   workflow_call:
-    secrets:
-      GITHUB_TOKEN:
-        description: |
-          Github token with read access to repositories, required for staged.dependencies installation
-        required: false
     inputs:
       install-system-dependencies:
         description: Check for and install system dependencies
@@ -91,15 +86,14 @@ on:
         description: An alternate name for the 'latest-tag' documentation item
         required: false
         type: string
-        default: ''
+        default: ""
       release-candidate-alt-name:
         description: An alternate name for the 'release-candidate' documentation item
         required: false
         type: string
-        default: ''
+        default: ""
       branches-or-tags-to-list:
-        description:
-          Which branches or tags should be listed under the
+        description: Which branches or tags should be listed under the
           'Versions' dropdown menu on the landing page?
           This input should be a regular expression in R.
         required: false

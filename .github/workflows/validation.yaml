@@ -38,11 +38,6 @@ on:
         required: false
         type: string
         default: "."
-    secrets:
-      GITHUB_TOKEN:
-        description: |
-          Github token with read access to repositories, required for staged.dependencies installation
-        required: false
 
 concurrency:
   group: validation-${{ github.event.pull_request.number || github.ref }}

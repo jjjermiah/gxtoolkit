@@ -4,10 +4,6 @@ name: Branch Cleanup 🍃
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
-        description: |
-          Github token with write access to repository
-        required: false
     inputs:
       last-commit-age-days:
         description: |

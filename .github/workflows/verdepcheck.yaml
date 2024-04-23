@@ -4,10 +4,6 @@ name: Dependency Test 🔢
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
-        description: |
-          Github token with read access to repositories, required for dependencies installation
-        required: false
       GCHAT_WEBHOOK:
         description: |
           Google Chat webhook to send failure notifications
@@ -99,7 +95,7 @@ jobs:
           github-token: ${{ steps.github-token.outputs.token }}
           check-args: ${{ inputs.check-args }}
           build-args: ${{ inputs.build-args }}
-          additional-env-vars:  ${{ inputs.additional-env-vars }}
+          additional-env-vars: ${{ inputs.additional-env-vars }}
           strategy: ${{ env.strategy }}
 
       - name: GChat notification 🔔

@@ -6,11 +6,6 @@ on:
     tags:
       - "v*"
   workflow_call:
-    secrets:
-      GITHUB_TOKEN:
-        description: |
-          Github token with write access to the repository
-        required: false
     inputs:
       create-rc-releases:
         description: Whether releases for RC tags (e.g. v0.0.1-rc1) should be created?
